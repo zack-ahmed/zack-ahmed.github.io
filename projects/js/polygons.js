@@ -13,6 +13,10 @@ function drawPolygon(context, sides, radius, rotation) {
 }
 
 function draw(sides, radius, rotation) {
+	if(sides.value < 3) {
+		alert("sides must be 3 or more");
+		return;
+	}
 	clearCanvas();
 	context = getCanvas2DContext("canvas")
 	context.beginPath();
